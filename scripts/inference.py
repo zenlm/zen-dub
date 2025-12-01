@@ -14,11 +14,11 @@ from omegaconf import OmegaConf
 from transformers import WhisperModel
 import sys
 
-from musetalk.utils.blending import get_image
-from musetalk.utils.face_parsing import FaceParsing
-from musetalk.utils.audio_processor import AudioProcessor
-from musetalk.utils.utils import get_file_type, get_video_fps, datagen, load_all_model
-from musetalk.utils.preprocessing import get_landmark_and_bbox, read_imgs, coord_placeholder
+from zen-dub.utils.blending import get_image
+from zen-dub.utils.face_parsing import FaceParsing
+from zen-dub.utils.audio_processor import AudioProcessor
+from zen-dub.utils.utils import get_file_type, get_video_fps, datagen, load_all_model
+from zen-dub.utils.preprocessing import get_landmark_and_bbox, read_imgs, coord_placeholder
 
 def fast_check_ffmpeg():
     try:
@@ -253,8 +253,8 @@ if __name__ == "__main__":
     parser.add_argument("--ffmpeg_path", type=str, default="./ffmpeg-4.4-amd64-static/", help="Path to ffmpeg executable")
     parser.add_argument("--gpu_id", type=int, default=0, help="GPU ID to use")
     parser.add_argument("--vae_type", type=str, default="sd-vae", help="Type of VAE model")
-    parser.add_argument("--unet_config", type=str, default="./models/musetalk/config.json", help="Path to UNet configuration file")
-    parser.add_argument("--unet_model_path", type=str, default="./models/musetalkV15/unet.pth", help="Path to UNet model weights")
+    parser.add_argument("--unet_config", type=str, default="./models/zen-dub/config.json", help="Path to UNet configuration file")
+    parser.add_argument("--unet_model_path", type=str, default="./models/zen-dubV15/unet.pth", help="Path to UNet model weights")
     parser.add_argument("--whisper_dir", type=str, default="./models/whisper", help="Directory containing Whisper model")
     parser.add_argument("--inference_config", type=str, default="configs/inference/test_img.yaml", help="Path to inference configuration file")
     parser.add_argument("--bbox_shift", type=int, default=0, help="Bounding box shift value")

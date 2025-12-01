@@ -13,9 +13,9 @@ import math
 from decord import AudioReader, VideoReader
 from decord.ndarray import cpu
 
-from musetalk.data.sample_method import get_src_idx, shift_landmarks_to_face_coordinates, resize_landmark 
-from musetalk.data import audio 
-from musetalk.utils.audio_utils import ensure_wav
+from zen-dub.data.sample_method import get_src_idx, shift_landmarks_to_face_coordinates, resize_landmark 
+from zen-dub.data import audio 
+from zen-dub.utils.audio_utils import ensure_wav
 
 syncnet_mel_step_size = math.ceil(16 / 5 * 16)  # latentsync
 

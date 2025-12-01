@@ -5,8 +5,8 @@ import torch
 import torch.nn.functional as F
 from torch import nn, optim
 from torch.optim.lr_scheduler import CosineAnnealingLR
-from musetalk.loss.discriminator import MultiScaleDiscriminator,DiscriminatorFullModel
-import musetalk.loss.vgg_face as vgg_face
+from zen-dub.loss.discriminator import MultiScaleDiscriminator,DiscriminatorFullModel
+import zen-dub.loss.vgg_face as vgg_face
 
 class Interpolate(nn.Module):
     def __init__(self, size=None, scale_factor=None, mode='nearest', align_corners=None):

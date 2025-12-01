@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# MuseTalk Training Script
-# This script combines both training stages for the MuseTalk model
+# Zen-Dub Training Script
+# This script combines both training stages for the Zen-Dub model
 # Usage: sh train.sh [stage1|stage2]
 # Example: sh train.sh stage1  # To run stage 1 training
 # Example: sh train.sh stage2  # To run stage 2 training

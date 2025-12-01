@@ -4,7 +4,7 @@
 CheckpointsDir="models"
 
 # Create necessary directories
-mkdir -p models/musetalk models/musetalkV15 models/syncnet models/dwpose models/face-parse-bisent models/sd-vae models/whisper
+mkdir -p models/zen-dub models/zen-dubV15 models/syncnet models/dwpose models/face-parse-bisent models/sd-vae models/whisper
 
 # Install required packages
 pip install -U "huggingface_hub[cli]"
@@ -13,15 +13,15 @@ pip install gdown
 # Set HuggingFace mirror endpoint
 export HF_ENDPOINT=https://hf-mirror.com
 
-# Download MuseTalk V1.0 weights
-huggingface-cli download TMElyralab/MuseTalk \
+# Download Zen-Dub V1.0 weights
+huggingface-cli download hanzoai/Zen-Dub \
   --local-dir $CheckpointsDir \
-  --include "musetalk/musetalk.json" "musetalk/pytorch_model.bin"
+  --include "zen-dub/zen-dub.json" "zen-dub/pytorch_model.bin"
 
-# Download MuseTalk V1.5 weights (unet.pth)
-huggingface-cli download TMElyralab/MuseTalk \
+# Download Zen-Dub V1.5 weights (unet.pth)
+huggingface-cli download hanzoai/Zen-Dub \
   --local-dir $CheckpointsDir \
-  --include "musetalkV15/musetalk.json" "musetalkV15/unet.pth"
+  --include "zen-dubV15/zen-dub.json" "zen-dubV15/unet.pth"
 
 # Download SD VAE weights
 huggingface-cli download stabilityai/sd-vae-ft-mse \

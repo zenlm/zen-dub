@@ -131,8 +131,8 @@ def print_directory_contents(path):
 def download_model():
     # 检查必需的模型文件是否存在
     required_models = {
-        "MuseTalk": f"{CheckpointsDir}/musetalkV15/unet.pth",
-        "MuseTalk": f"{CheckpointsDir}/musetalkV15/musetalk.json",
+        "Zen-Dub": f"{CheckpointsDir}/zen-dubV15/unet.pth",
+        "Zen-Dub": f"{CheckpointsDir}/zen-dubV15/zen-dub.json",
         "SD VAE": f"{CheckpointsDir}/sd-vae/config.json",
         "Whisper": f"{CheckpointsDir}/whisper/config.json",
         "DWPose": f"{CheckpointsDir}/dwpose/dw-ll_ucoco_384.pth",
@@ -165,11 +165,11 @@ def download_model():
 
 download_model()  # for huggingface deployment.
 
-from musetalk.utils.blending import get_image
-from musetalk.utils.face_parsing import FaceParsing
-from musetalk.utils.audio_processor import AudioProcessor
-from musetalk.utils.utils import get_file_type, get_video_fps, datagen, load_all_model
-from musetalk.utils.preprocessing import get_landmark_and_bbox, read_imgs, coord_placeholder, get_bbox_range
+from zen-dub.utils.blending import get_image
+from zen-dub.utils.face_parsing import FaceParsing
+from zen-dub.utils.audio_processor import AudioProcessor
+from zen-dub.utils.utils import get_file_type, get_video_fps, datagen, load_all_model
+from zen-dub.utils.preprocessing import get_landmark_and_bbox, read_imgs, coord_placeholder, get_bbox_range
 
 
 def fast_check_ffmpeg():
@@ -390,9 +390,9 @@ def inference(audio_path, video_path, bbox_shift, extra_margin=10, parsing_mode=
 # load model weights
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 vae, unet, pe = load_all_model(
-    unet_model_path="./models/musetalkV15/unet.pth", 
+    unet_model_path="./models/zen-dubV15/unet.pth", 
     vae_type="sd-vae",
-    unet_config="./models/musetalkV15/musetalk.json",
+    unet_config="./models/zen-dubV15/zen-dub.json",
     device=device
 )
 
@@ -478,7 +478,7 @@ css = """#input_img {max-width: 1024px !important} #output_vid {max-width: 1024p
 
 with gr.Blocks(css=css) as demo:
     gr.Markdown(
-        """<div align='center'> <h1>MuseTalk: Real-Time High-Fidelity Video Dubbing via Spatio-Temporal Sampling</h1> \
+        """<div align='center'> <h1>Zen-Dub: Real-Time High-Fidelity Video Dubbing via Spatio-Temporal Sampling</h1> \
                     <h2 style='font-weight: 450; font-size: 1rem; margin: 0rem'>\
                     </br>\
                     Yue Zhang <sup>*</sup>,\
@@ -494,8 +494,8 @@ with gr.Blocks(css=css) as demo:
                     (<sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author, benbinwu@tencent.com)\
                     Lyra Lab, Tencent Music Entertainment\
                 </h2> \
-                <a style='font-size:18px;color: #000000' href='https://github.com/TMElyralab/MuseTalk'>[Github Repo]</a>\
-                <a style='font-size:18px;color: #000000' href='https://github.com/TMElyralab/MuseTalk'>[Huggingface]</a>\
+                <a style='font-size:18px;color: #000000' href='https://github.com/hanzoai/Zen-Dub'>[Github Repo]</a>\
+                <a style='font-size:18px;color: #000000' href='https://github.com/hanzoai/Zen-Dub'>[Huggingface]</a>\
                 <a style='font-size:18px;color: #000000' href='https://arxiv.org/abs/2410.10122'> [Technical report] </a>"""
     )
 

@@ -11,12 +11,12 @@ from diffusers.optimization import get_scheduler
 from omegaconf import OmegaConf
 from einops import rearrange
 
-from musetalk.models.syncnet import SyncNet
-from musetalk.loss.discriminator import MultiScaleDiscriminator, DiscriminatorFullModel
-from musetalk.loss.basic_loss import Interpolate
-import musetalk.loss.vgg_face as vgg_face
-from musetalk.data.dataset import PortraitDataset
-from musetalk.utils.utils import (
+from zen-dub.models.syncnet import SyncNet
+from zen-dub.loss.discriminator import MultiScaleDiscriminator, DiscriminatorFullModel
+from zen-dub.loss.basic_loss import Interpolate
+import zen-dub.loss.vgg_face as vgg_face
+from zen-dub.data.dataset import PortraitDataset
+from zen-dub.utils.utils import (
     get_image_pred,
     process_audio_features,
     process_and_save_images
@@ -65,7 +65,7 @@ def initialize_models_and_optimizers(cfg, accelerator, weight_dtype):
 
     unet_config_file = os.path.join(
         cfg.pretrained_model_name_or_path, 
-        cfg.unet_sub_folder + "/musetalk.json"
+        cfg.unet_sub_folder + "/zen-dub.json"
     )
     
     with open(unet_config_file, 'r') as f:

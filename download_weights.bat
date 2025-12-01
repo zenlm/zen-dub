@@ -5,8 +5,8 @@ setlocal
 set CheckpointsDir=models
 
 :: Create necessary directories
-mkdir %CheckpointsDir%\musetalk
-mkdir %CheckpointsDir%\musetalkV15
+mkdir %CheckpointsDir%\zen-dub
+mkdir %CheckpointsDir%\zen-dubV15
 mkdir %CheckpointsDir%\syncnet
 mkdir %CheckpointsDir%\dwpose
 mkdir %CheckpointsDir%\face-parse-bisent
@@ -19,8 +19,8 @@ pip install -U "huggingface_hub[hf_xet]"
 :: Set HuggingFace endpoint
 set HF_ENDPOINT=https://hf-mirror.com
 
-:: Download MuseTalk weights
-hf download TMElyralab/MuseTalk --local-dir %CheckpointsDir%
+:: Download Zen-Dub weights
+hf download hanzoai/Zen-Dub --local-dir %CheckpointsDir%
 
 :: Download SD VAE weights
 hf download stabilityai/sd-vae-ft-mse --local-dir %CheckpointsDir%\sd-vae --include "config.json" "diffusion_pytorch_model.bin"

@@ -33,14 +33,14 @@ fi
 
 # Define the model paths based on the version
 if [ "$version" = "v1.0" ]; then
-    model_dir="./models/musetalk"
+    model_dir="./models/zen-dub"
     unet_model_path="$model_dir/pytorch_model.bin"
-    unet_config="$model_dir/musetalk.json"
+    unet_config="$model_dir/zen-dub.json"
     version_arg="v1"
 elif [ "$version" = "v1.5" ]; then
-    model_dir="./models/musetalkV15"
+    model_dir="./models/zen-dubV15"
     unet_model_path="$model_dir/unet.pth"
-    unet_config="$model_dir/musetalk.json"
+    unet_config="$model_dir/zen-dub.json"
     version_arg="v15"
 else
     echo "Invalid version specified. Please use v1.0 or v1.5."

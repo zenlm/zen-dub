@@ -12,12 +12,12 @@ import copy
 import json
 from transformers import WhisperModel
 
-from musetalk.utils.face_parsing import FaceParsing
-from musetalk.utils.utils import datagen
-from musetalk.utils.preprocessing import get_landmark_and_bbox, read_imgs
-from musetalk.utils.blending import get_image_prepare_material, get_image_blending
-from musetalk.utils.utils import load_all_model
-from musetalk.utils.audio_processor import AudioProcessor
+from zen-dub.utils.face_parsing import FaceParsing
+from zen-dub.utils.utils import datagen
+from zen-dub.utils.preprocessing import get_landmark_and_bbox, read_imgs
+from zen-dub.utils.blending import get_image_prepare_material, get_image_blending
+from zen-dub.utils.utils import load_all_model
+from zen-dub.utils.audio_processor import AudioProcessor
 
 import shutil
 import threading
@@ -310,16 +310,16 @@ class Avatar:
 
 if __name__ == "__main__":
     '''
-    This script is used to simulate online chatting and applies necessary pre-processing such as face detection and face parsing in advance. During online chatting, only UNet and the VAE decoder are involved, which makes MuseTalk real-time.
+    This script is used to simulate online chatting and applies necessary pre-processing such as face detection and face parsing in advance. During online chatting, only UNet and the VAE decoder are involved, which makes Zen-Dub real-time.
     '''
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("--version", type=str, default="v15", choices=["v1", "v15"], help="Version of MuseTalk: v1 or v15")
+    parser.add_argument("--version", type=str, default="v15", choices=["v1", "v15"], help="Version of Zen-Dub: v1 or v15")
     parser.add_argument("--ffmpeg_path", type=str, default="./ffmpeg-4.4-amd64-static/", help="Path to ffmpeg executable")
     parser.add_argument("--gpu_id", type=int, default=0, help="GPU ID to use")
     parser.add_argument("--vae_type", type=str, default="sd-vae", help="Type of VAE model")
-    parser.add_argument("--unet_config", type=str, default="./models/musetalk/musetalk.json", help="Path to UNet configuration file")
-    parser.add_argument("--unet_model_path", type=str, default="./models/musetalk/pytorch_model.bin", help="Path to UNet model weights")
+    parser.add_argument("--unet_config", type=str, default="./models/zen-dub/zen-dub.json", help="Path to UNet configuration file")
+    parser.add_argument("--unet_model_path", type=str, default="./models/zen-dub/pytorch_model.bin", help="Path to UNet model weights")
     parser.add_argument("--whisper_dir", type=str, default="./models/whisper", help="Directory containing Whisper model")
     parser.add_argument("--inference_config", type=str, default="configs/inference/realtime.yaml")
     parser.add_argument("--bbox_shift", type=int, default=0, help="Bounding box shift value")
