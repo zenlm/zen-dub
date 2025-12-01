@@ -92,7 +92,7 @@ def calculate_landmarks_similarity(selected_idx, landmarks_list,image_shapes, st
 
     return similar_landmarks_indices
 
-def process_bbox_musetalk(face_array, landmark_array):
+def process_bbox_zen-dub(face_array, landmark_array):
     x_min_face, y_min_face, x_max_face, y_max_face = map(int, face_array)
     x_min_lm = min([int(x) for x, y in landmark_array])
     y_min_lm = min([int(y) for x, y in landmark_array])
@@ -128,7 +128,7 @@ def shift_landmarks_to_face_coordinates(landmark_list, face_list):
     for i in range(len(face_list)):
         landmark_array = np.array(landmark_list[i])  # 转换为numpy数组并创建副本
         face_array = face_list[i]
-        f_landmark_bbox = process_bbox_musetalk(face_array, landmark_array) 
+        f_landmark_bbox = process_bbox_zen-dub(face_array, landmark_array) 
         x_min, y_min, x_max, y_max = f_landmark_bbox
         landmark_array[:, 0] = landmark_array[:, 0] - f_landmark_bbox[0]
         landmark_array[:, 1] = landmark_array[:, 1] - f_landmark_bbox[1]

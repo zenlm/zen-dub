@@ -1,6 +1,6 @@
 exp_name: 'test'  # Name of the experiment
 output_dir: './exp_out/stage1/'  # Directory to save experiment outputs
-unet_sub_folder: musetalk  # Subfolder name for UNet model
+unet_sub_folder: zen-dub  # Subfolder name for UNet model
 random_init_unet: True  # Whether to randomly initialize UNet (stage1) or use pretrained weights (stage2)
 whisper_path: "./models/whisper"  # Path to the Whisper model
 pretrained_model_name_or_path: "./models"  # Path to pretrained models

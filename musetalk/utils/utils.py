@@ -8,14 +8,14 @@ from einops import rearrange
 import shutil
 import os.path as osp
 
-from musetalk.models.vae import VAE
-from musetalk.models.unet import UNet,PositionalEncoding
+from zen-dub.models.vae import VAE
+from zen-dub.models.unet import UNet,PositionalEncoding
 
 
 def load_all_model(
-    unet_model_path=os.path.join("models", "musetalkV15", "unet.pth"),
+    unet_model_path=os.path.join("models", "zen-dubV15", "unet.pth"),
     vae_type="sd-vae",
-    unet_config=os.path.join("models", "musetalkV15", "musetalk.json"),
+    unet_config=os.path.join("models", "zen-dubV15", "zen-dub.json"),
     device=None,
 ):
     vae = VAE(

@@ -9,7 +9,7 @@ from typing import Tuple, List, Union
 import decord
 import json
 import cv2
-from musetalk.utils.face_detection import FaceAlignment,LandmarksType
+from zen-dub.utils.face_detection import FaceAlignment,LandmarksType
 from mmpose.apis import inference_topdown, init_model
 from mmpose.structures import merge_data_samples
 import sys
@@ -217,7 +217,7 @@ def analyze_video(org_path: str, dst_path: str, vid_list: List[str]) -> None:
     None
     """
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    config_file = './musetalk/utils/dwpose/rtmpose-l_8xb32-270e_coco-ubody-wholebody-384x288.py'
+    config_file = './zen-dub/utils/dwpose/rtmpose-l_8xb32-270e_coco-ubody-wholebody-384x288.py'
     checkpoint_file = './models/dwpose/dw-ll_ucoco_384.pth'
 
     analyze_face = AnalyzeFace(device, config_file, checkpoint_file)
