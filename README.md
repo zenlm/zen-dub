@@ -12,10 +12,10 @@ Chao Zhan,
 Junxin Huang,
 Yingjie He,
 Wenjiang Zhou
-(<sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author, benbinwu@tencent.com)
+(<sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author, benbinwu@zen.com)
 
 Hanzo AI Lab, Hanzo Industries
-Lyra Lab, Tencent Music Entertainment
+Lyra Lab, Zen LM Music Entertainment
 
 **[github](https://github.com/hanzoai/zen-dub)**    **[huggingface](https://huggingface.co/hanzoai/Zen-Dub)**    **[space](https://huggingface.co/spaces/hanzoai/Zen-Dub)**    **[Technical report](https://arxiv.org/abs/2410.10122)**
 
@@ -522,7 +522,7 @@ Thanks for open-sourcing!
 
 # Limitations
 - Resolution: Though Zen-Dub uses a face region size of 256 x 256, which make it better than other open-source methods, it has not yet reached the theoretical resolution bound. We will continue to deal with this problem.
-If you need higher resolution, you could apply super resolution models such as [GFPGAN](https://github.com/TencentARC/GFPGAN) in combination with Zen-Dub.
+If you need higher resolution, you could apply super resolution models such as [GFPGAN](https://github.com/Zen LMARC/GFPGAN) in combination with Zen-Dub.
 
 - Identity preservation: Some details of the original face are not well preserved, such as mustache, lip shape and color.
 
