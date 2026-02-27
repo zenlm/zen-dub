@@ -12,10 +12,10 @@ Chao Zhan,
 Junxin Huang,
 Yingjie He,
 Wenjiang Zhou
-(<sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author, benbinwu@zen.com)
+(<sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding Author, research@zenlm.org)
 
 Hanzo AI Lab, Hanzo Industries
-Lyra Lab, Zen LM Music Entertainment
+Zen LM
 
 **[github](https://github.com/hanzoai/zen-dub)**    **[huggingface](https://huggingface.co/hanzoai/Zen-Dub)**    **[space](https://huggingface.co/spaces/hanzoai/Zen-Dub)**    **[Technical report](https://arxiv.org/abs/2410.10122)**
 
