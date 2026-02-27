@@ -513,16 +513,9 @@ python -m scripts.inference --inference_config configs/inference/test.yaml --bbo
 
 As a complete solution to virtual human generation, you are suggested to first apply [MuseV](https://github.com/hanzoai/MuseV) to generate a video (text-to-video, image-to-video or pose-to-video) by referring [this](https://github.com/hanzoai/MuseV?tab=readme-ov-file#text2video). Frame interpolation is suggested to increase frame rate. Then, you can use `Zen-Dub` to generate a lip-sync video by referring [this](https://github.com/hanzoai/Zen-Dub?tab=readme-ov-file#inference).
 
-# Acknowledgement
-1. We thank open-source components like [whisper](https://github.com/openai/whisper), [dwpose](https://github.com/IDEA-Research/DWPose), [face-alignment](https://github.com/1adrianb/face-alignment), [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch), [S3FD](https://github.com/yxlijun/S3FD.pytorch) and [LatentSync](https://huggingface.co/ByteDance/LatentSync/tree/main).
-1. Zen-Dub has referred much to [diffusers](https://github.com/huggingface/diffusers) and [isaacOnline/whisper](https://github.com/isaacOnline/whisper/tree/extract-embeddings).
-1. Zen-Dub has been built on [HDTF](https://github.com/MRzzm/HDTF) datasets.
-
-Thanks for open-sourcing!
-
 # Limitations
 - Resolution: Though Zen-Dub uses a face region size of 256 x 256, which make it better than other open-source methods, it has not yet reached the theoretical resolution bound. We will continue to deal with this problem.
-If you need higher resolution, you could apply super resolution models such as [GFPGAN](https://github.com/Zen LMARC/GFPGAN) in combination with Zen-Dub.
+If you need higher resolution, you could apply super resolution models in combination with Zen-Dub.
 
 - Identity preservation: Some details of the original face are not well preserved, such as mustache, lip shape and color.
 
