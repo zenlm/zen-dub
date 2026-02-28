@@ -15,4 +15,12 @@ ffmprobe*
 ffplay*
 debug
 exp_out
-.gradio
+.gradioCLAUDE.md
+AGENTS.md
+GEMINI.md
+QWEN.md
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
