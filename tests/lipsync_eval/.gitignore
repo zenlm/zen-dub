@@ -1,0 +1,7 @@
+# SyncNet / S3FD weights + cloned upstream (auto-fetched by run_lipsync_eval.sh)
+syncnet_python/
+# transient run scratch
+work/
+out/
+*.pyc
+__pycache__/
