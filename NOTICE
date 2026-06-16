@@ -1,0 +1,27 @@
+zen-dub
+Copyright 2025-2026 Zen Authors
+
+This model and its accompanying code are licensed under the Apache License, Version 2.0.
+Zen models are developed by the Zen Authors (https://zenlm.org).
+
+----------------------------------------------------------------------
+Third-party components (see THIRD-PARTY-LICENSES.md):
+
+This product includes MuseTalk (https://github.com/TMElyralab/MuseTalk),
+licensed under the MIT License.
+  Copyright (c) 2024 Tencent Music Entertainment Lyra Lab.
+
+This product includes sd-vae-ft-mse (https://huggingface.co/stabilityai/sd-vae-ft-mse),
+licensed under the MIT License.
+  Copyright (c) Stability AI.
+
+This product includes Whisper (https://github.com/openai/whisper),
+licensed under the MIT License.
+  Copyright (c) 2022 OpenAI.
+
+This product includes face-alignment / 2D-FAN-4 (https://github.com/1adrianb/face-alignment),
+licensed under the BSD 3-Clause License.
+  Copyright (c) 2017, Adrian Bulat.
+
+The MuseTalk UNet derives from Stable Diffusion v1.4 (CompVis / Stability AI),
+licensed under the CreativeML Open RAIL-M license.
