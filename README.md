@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/hero.svg" alt="zen-dub" width="880"></p>
+
 # Zen-Dub
 
 <strong>Zen-Dub: Real-Time High-Fidelity Video Dubbing via Spatio-Temporal Sampling</strong>
