@@ -15,6 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
+          cache: false
           python-version: "3.11"
 
       - name: Install dependencies
